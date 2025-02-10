@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크 복사하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>59만선불폰 링크 복사</h2>
+    <p>아래 버튼을 클릭하면 링크가 복사됩니다.</p>
+
+    <button onclick="copyToClipboard()">📋 링크 복사하기</button>
+
+    <script>
+        function copyToClipboard() {
+            const link = "https://59prepaidphone.com"; // 원하는 URL 입력
+            navigator.clipboard.writeText(link).then(() => {
+                alert("링크가 클립보드에 복사되었습니다!");
+            }).catch(err => {
+                console.error('복사 실패:', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
